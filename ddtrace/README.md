@@ -6,5 +6,23 @@
 4. Run: `./tracedetails.py [file_name] [id]` to print all the details of a specific span
 
 Example[s]:
-`./nesttrace.py example.json 1`
-`./tracedetails.py example.json 2`
+1. `./nesttrace.py example.json 1`
+
+Output:
+```
+5sec span 1: get [1]
+ 2sec span 2: request #1 [2]
+ 3sec span 3: request #2 [3]
+```
+
+2. `./tracedetails.py example.json 2`
+
+Output:
+```json
+{
+  "name": "span 2",
+  "duration": 2,
+  "resource": "request #1",
+  "children_ids": []
+}
+```
