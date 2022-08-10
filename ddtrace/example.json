@@ -1,0 +1,20 @@
+{
+    "1": {
+        "name": "span 1",
+        "duration": 5,
+        "resource": "get",
+        "children_ids": ["2", "3"]
+    },
+    "2": {
+        "name": "span 2",
+        "duration": 2,
+        "resource": "request #1",
+        "children_ids": []
+    },
+    "3": {
+        "name": "span 3",
+        "duration": 3,
+        "resource": "request #2",
+        "children_ids": []
+    }
+}

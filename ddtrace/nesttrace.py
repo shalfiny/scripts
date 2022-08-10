@@ -4,7 +4,7 @@ import sys, json
 
 def rec_print(spans, node_id, l = 0):
     s = spans[node_id]
-    print("{}{} {}: {} [{}]".format(' ' * l, s['duration'], s['name'], s['resource'][:30], node_id))
+    print("{}{}sec {}: {} [{}]".format(' ' * l, s['duration'], s['name'], s['resource'][:30], node_id))
     for c in s['children_ids']:
         rec_print(spans, c, l + 1)
 
